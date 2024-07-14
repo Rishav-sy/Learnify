@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 11</title>
+</head>
+<body>
+  <h1>String Operations</h1>
+
+  <h2>Extract First Five Letters</h2>
+  <input type="text" id="input-string" value=" gfuh ieiuei ">
+  <button onclick="showFirstFive()">Extract</button>
+  <p>Output: <span id="output-first-five"></span></p>
+
+  <h2>Get Length and Uppercase</h2>
+  <input type="text" id="input-length" value="hduej dij">
+  <button onclick="showLengthUppercase()">Get Length and Uppercase</button>
+  <p>Output: <span id="output-length-uppercase"></span></p>
+
+  <h2>Lowercase and Trim</h2>
+  <input type="text" id="input-lowercase-trim" value="   biji jdo   ">
+  <button onclick="showLowercaseTrim()">Lowercase and Trim</button>
+  <p>Output: <span id="output-lowercase-trim"></span></p>
+
+  <h2>Replace Word</h2>
+  <input type="text" id="input-string-replace" value="The quick brown fox jumps over the lazy dog.">
+  <input type="text" id="input-word-replace" value="fox">
+  <input type="text" id="input-replacement" value="cat">
+  <button onclick="showReplacedString()">Replace Word</button>
+  <p>Output: <span id="output-replace"></span></p>
+
+  <h2>Animal Object</h2>
+  <p>Animal Name: <span id="animal-name"></span></p>
+  <p>Animal Type: <span id="animal-type"></span></p>
+  <p>Animal Age: <span id="animal-age"></span></p>
+
+  <script>
+    function showFirstFive() {
+      const inputString = document.getElementById('input-string').value;
+      const firstFive = inputString.trim().slice(0, 5);
+      document.getElementById('output-first-five').textContent = firstFive;
+    }
+
+    function showLengthUppercase() {
+      const inputLength = document.getElementById('input-length').value;
+      const lengthUppercase = inputLength.length.toString().toUpperCase();
+      document.getElementById('output-length-uppercase').textContent = lengthUppercase;
+    }
+
+    function showLowercaseTrim() {
+      const inputLowercaseTrim = document.getElementById('input-lowercase-trim').value;
+      const lowercaseTrim = inputLowercaseTrim.toLowerCase().trim();
+      document.getElementById('output-lowercase-trim').textContent = lowercaseTrim;
+    }
+
+    function showReplacedString() {
+      const inputStringReplace = document.getElementById('input-string-replace').value;
+      const inputWordReplace = document.getElementById('input-word-replace').value;
+      const inputReplacement = document.getElementById('input-replacement').value;
+      const replacedString = inputStringReplace.replace(inputWordReplace, inputReplacement);
+      document.getElementById('output-replace').textContent = replacedString;
+    }
+
+    const animal = {
+      name: 'tommy',
+      type: 'Dog',
+      age: 5
+    };
+
+    animal.name= 'roxy'
+
+    document.getElementById('animal-name').textContent = animal.name;
+    document.getElementById('animal-type').textContent = animal.type;
+    document.getElementById('animal-age').textContent = animal.age;
+  </script>
+</body>
+</html>

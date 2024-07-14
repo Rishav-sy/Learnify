@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #77E4C8;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid black; 
+    background-color: #36C2CE;
+    width: 25%;
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+}
+
+button{
+    background-color: #478CCF;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.work {
+    background-image: url("../images/lenovo-yoga.avif");
+    position: relative;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mid {
+    background-image: url("../images/lenovo-loq.avif");
+    position: relative;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.high {
+    background-image: url("../images/Lenovo-Legion.png");
+    position: relative;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}

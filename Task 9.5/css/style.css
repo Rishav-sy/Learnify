@@ -1,0 +1,113 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(232, 231, 231);
+    flex-wrap: wrap;
+    align-content: space-between;
+    /* border: 1px solid black; */
+    gap: 10px;
+}
+
+.flex-container>div {
+    width: 15%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.line {
+    border: 1px dotted lightgray;
+}
+
+.product-box {
+    text-align: center;
+    background-color: #fff;
+    padding: 8px;
+    /* padding-bottom: 30px; */
+    border: 1px solid gray;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.off {
+    font-size: 16px;
+    font-weight: bold;
+    color: #B12704;
+}
+
+.vfm-score {
+    display: inline-block;
+    background-color: green;
+    color: #fff;
+    padding: 3px 6px;
+    margin-right: 5px;
+}
+
+.vfm-score-2 {
+    display: inline-block;
+    background-color: gold;
+    color: #fff;
+    padding: 3px 6px;
+    margin-right: 5px;
+}
+
+.vfm-box {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.lists {
+    text-align: left;
+    padding-left: 10%;
+    font-size: 15px;
+    color: gray;
+}
+
+ul {
+    line-height: 2;
+}
+
+.line2 {
+    margin: 5px 0;
+}
+
+button {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 30%;
+    padding-right: 30%;
+    background-color: white;
+    color: rgb(235, 140, 93);
+    border: 2px solid rgb(235, 140, 93);
+}
+
+button:hover {
+    color: rgb(193, 115, 77);
+}
+
+
+
+@media (max-width: 900px) {
+    .flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .flex-container>div {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-container>div {
+        width: 100%;
+    }
+}

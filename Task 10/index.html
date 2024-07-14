@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Data</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="employee-data">
+    <h2>Employee Data</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Salary</th>
+          <th>Designation</th>
+          <th>City</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody id="employee-table-body"></tbody>
+    </table>
+  </div>
+
+  <script>
+    const employeeData = [
+    {
+        name: "Rahul Sharma",
+        age: 35,
+        salary: 50000,
+        designation: "Manager",
+        city: "Bangalore",
+        department: "Sales"
+    },
+    {
+        name: "Ishan Kumar",
+        age: 28,
+        salary: 40000,
+        designation: "Developer",
+        city: "Delhi",
+        department: "IT"
+    },
+    {
+        name: "Rishabh Jain",
+        age: 42,
+        salary: 60000,
+        designation: "Director",
+        city: "Hyderabad",
+        department: "Marketing"
+    }
+];
+
+function showEmployees() {
+    const tableBody = document.getElementById("employee-table-body");
+    tableBody.innerHTML = "";
+
+    employeeData.forEach(employee => {
+        const row = document.createElement("tr");
+
+        Object.values(employee).forEach(value => {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.appendChild(cell);
+        });
+
+        tableBody.appendChild(row);
+    });
+}
+
+showEmployees();
+
+// Implicit coersion:
+// console.log('A' - 1);//Nan
+// console.log('A' + 1);//A1
+// console.log(2 + '2' + '2');//222
+// console.log('hello' + 'world' + 89);//helloworld89
+// console.log('hello' - 'world' + 89);//NaN
+// console.log('hello' + 78);//hello78
+// console.log('hello' + 78);//hello78
+// console.log('78' - 90 + '2');//-122
+// console.log(2 - '2' + 90);//90
+// console.log(89 - '90' / 2);//0.5
+  </script>
+</body>
+</html>
