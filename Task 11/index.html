@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Task 11</title>
 </head>
+
 <body>
   <h1>String Operations</h1>
 
@@ -17,12 +19,12 @@
   <p>Output: <span id="output-length-uppercase"></span></p>
 
   <h2>Lowercase and Trim</h2>
-  <input type="text" id="input-lowercase-trim" value="   biji jdo   ">
+  <input type="text" id="input-lowercase-trim" value="   BIJI JDO  ">
   <button onclick="showLowercaseTrim()">Lowercase and Trim</button>
   <p>Output: <span id="output-lowercase-trim"></span></p>
 
   <h2>Replace Word</h2>
-  <input type="text" id="input-string-replace" value="The quick brown fox jumps over the lazy dog.">
+  <input type="text" id="input-string-replace" value="The fox jumps over the dog.">
   <input type="text" id="input-word-replace" value="fox">
   <input type="text" id="input-replacement" value="cat">
   <button onclick="showReplacedString()">Replace Word</button>
@@ -42,8 +44,10 @@
 
     function showLengthUppercase() {
       const inputLength = document.getElementById('input-length').value;
-      const lengthUppercase = inputLength.length.toString().toUpperCase();
-      document.getElementById('output-length-uppercase').textContent = lengthUppercase;
+      const length = inputLength.length;
+      const uppercase = inputLength.toUpperCase();
+      const result = "Length: " + length + ", Uppercase: " + uppercase;
+      document.getElementById('output-length-uppercase').textContent = result;
     }
 
     function showLowercaseTrim() {
@@ -66,11 +70,12 @@
       age: 5
     };
 
-    animal.name= 'roxy'
+    animal.name = 'roxy'
 
     document.getElementById('animal-name').textContent = animal.name;
     document.getElementById('animal-type').textContent = animal.type;
     document.getElementById('animal-age').textContent = animal.age;
   </script>
 </body>
+
 </html>
